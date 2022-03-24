@@ -1,13 +1,26 @@
 # Hosting a Full-Stack Application
 
-### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
+## I used the udagram project to be deployed.
+> - I haven't hard-coded any environment variables but I added them using the eb cli and manually in the circleci.
+> - The configuration files are updated to set the environment variables to the project code, for example, setting the server port and the server url and the database port the database url, user, and password. it's in udagram-api/src/config/config.ts.
+> - I added all the scripts inside the package.json file. I added the scripts for installation, build and deployment for bothe the backend and the frontend to automate all the steps.
+> - I added the screenshots of all the aws resources and environments, showing the environment variables.
+> - I linked the project in github to circleci and added the config.yml file of the circleci containing all the orbs and jobs for running the scripts automatically.
+> - For accessing the application please visit: `http://udagrambucket01.s3-website-us-east-1.amazonaws.com/home` but please make sure you are using a browser that **doesn't enforce CORS policy** or blocking the user of the EB aws URL by the S3 URL. For running chrome without cors, please check this: `https://alfilatov.com/posts/run-chrome-without-cors/`
+> For accessing my github repository which is linked to circleci, please visit: `https://github.com/May-Hassan-Ismail/Udacity_deployment`
 
----
+## pipeline process inside circleci.
+### Continuous integration:
+> - First I added all the commands needed for installing and building the application in the package.json files in the frontend and the backend then called these scripts inside the package.json file of the main application.
+> - I added the jobs inside circleci yml file for installing all the dependencies on both the frontend and backend of the application using the : `npm install` command inside package.json files.
+> - Then I added the jobs for building the frontend and the backend by calling the corresponding scripts.
 
-In this project you will learn how to take a newly developed Full-Stack application built for a retailer and deploy it to a cloud service provider so that it is available to customers. You will use the aws console to start and configure the services the application needs such as a database to store product information and a web server allowing the site to be discovered by potential customers. You will modify your package.json scripts and replace hard coded secrets with environment variables in your code.
+### Continuous Deployment:
+> - First I added all the commands needed deploying the application in the package.json files in the frontend and the backend then called these scripts inside the package.json file of the main application.
+> - I added the Elastic Beanstalk and aws in the circleci orbs for setting them up and installing them for the deployment.
+> - I added the jobs inside circleci yml file for deploying the frontend and the backend just by calling the deploy scripts added to the main package.json file which correspondingly calls the deploy commands added to the package.json file of both the frontend and the backend.
+> - I linked my github application to the circleci so the pipeline automatically run after every application update.
 
-After the initial setup, you will learn to interact with the services you started on aws and will deploy manually the application a first time to it. As you get more familiar with the services and interact with them through a CLI, you will gradually understand all the moving parts.
+## All the screenshots for the EB and S3 and DB and circleci are added to the zip file and I also added a video of the running application after being deployed.
 
-You will then register for a free account on CircleCi and connect your Github account to it. Based on the manual steps used to deploy the app, you will write a config.yml file that will make the process reproducible in CircleCi. You will set up the process to be executed automatically based when code is pushed on the main Github branch.
-
-The project will also include writing documentation and runbooks covering the operations of the deployment process. Those runbooks will serve as a way to communicate with future developers and anybody involved in diagnosing outages of the Full-Stack application.
+## I also added the diagram showing the relationships and the communication between the different services.
