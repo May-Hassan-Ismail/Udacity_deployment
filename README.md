@@ -6,8 +6,8 @@
 > - I added all the scripts inside the package.json file. I added the scripts for installation, build and deployment for bothe the backend and the frontend to automate all the steps.
 > - I added the screenshots of all the aws resources and environments, showing the environment variables.
 > - I linked the project in github to circleci and added the config.yml file of the circleci containing all the orbs and jobs for running the scripts automatically.
-> - For accessing the application please visit: `http://udagrambucket01.s3-website-us-east-1.amazonaws.com/home` but please make sure you are using a browser that **doesn't enforce CORS policy** or blocking the use of the EB aws URL by the S3 URL. For running chrome without cors, please check this: `https://alfilatov.com/posts/run-chrome-without-cors/`
-> For accessing my github repository which is linked to circleci, please visit: `https://github.com/May-Hassan-Ismail/Udacity_deployment`
+> - For accessing the application please visit: `http://udagrambucket01.s3-website-us-east-1.amazonaws.com/home` but please make sure you are using a browser that **doesn't enforce CORS policy** or blocking the use of the EB URL by the S3 bucket. For running chrome without cors, please check this: `https://alfilatov.com/posts/run-chrome-without-cors/`
+> - For accessing my github repository which is linked to circleci to check the structure of the project and the scripts added, please visit: `https://github.com/May-Hassan-Ismail/Udacity_deployment`
 
 ## pipeline process inside circleci.
 ### Continuous integration:
