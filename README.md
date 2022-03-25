@@ -20,7 +20,8 @@
 > - I added the Elastic Beanstalk and aws in the circleci orbs for setting them up and installing them for the deployment.
 > - I added the jobs inside circleci yml file for deploying the frontend and the backend just by calling the deploy scripts added to the main package.json file which correspondingly calls the deploy commands added to the package.json file of both the frontend and the backend.
 > - I linked my github application to the circleci so the pipeline automatically run after every application update.
+> - The badge: [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/May-Hassan-Ismail)
 
 ## All the screenshots for the EB and S3 and DB and circleci are added to the zip file and I also added a video of the running application after being deployed.
 
-## I also added the diagram showing the relationships and the communication between the different services.
+## I also added the diagram showing the architecture and another diagram showing the pipeline relationships and the communication between the different services.
