@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "test-front": "echo \"Error: no test specified\" && exit 1",
+    "test-front": "echo \"no test specified\"",
     "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh"
   },
   "private": true,
