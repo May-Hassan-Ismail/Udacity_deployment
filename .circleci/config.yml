@@ -10,6 +10,7 @@ jobs:
     branches:
       only:
         - main
+        - /rc-.*/
     docker:
       - image: "cimg/base:stable"
     # setting up all the softwares used for installation, building and deploying the application.
