@@ -7,10 +7,6 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
 jobs:
   build:
-    branches:
-      only:
-        - main
-        - /rc-.*/
     docker:
       - image: "cimg/base:stable"
     # setting up all the softwares used for installation, building and deploying the application.
@@ -55,3 +51,10 @@ jobs:
           name: Deploy Front-End S3
           command: |
             npm run frontend:deploy
+workflows:
+  basic-workflow:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: main
